@@ -1,0 +1,179 @@
+.container {
+	display: flex;
+	min-height: 100vh;
+	column-gap: 20px;
+	padding-right: 20px;
+}
+
+.header {
+	min-width: 200px;
+	padding: 10px 0 10px 20px;
+	background-color: #111111;
+	color: #ffffff;
+}
+
+.title {
+	font-size: 30px;
+	margin-bottom: 50px;
+}
+
+.navList {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3px;
+	margin-bottom: 15px;
+}
+
+.navTab {
+	padding: 10px;
+	border-radius: 10px 0 0 10px;
+	background-color: #ffffff;
+	color: #111111;
+
+	&:not(:first-child) {
+		border: 1px solid #111111;
+		background-color: #5a5a5a;
+		color: #afafaf;
+		cursor: pointer;
+		transition:
+			background-color 250ms,
+			color 250ms;
+
+		&:hover {
+			background-color: #afafaf;
+			color: #5a5a5a;
+		}
+	}
+}
+
+.addTab {
+	display: flex;
+	align-items: center;
+	width: 40px;
+	margin-left: auto;
+	padding: 10px;
+	border-radius: 10px 0 0 10px;
+	background-color: #ffffff;
+	color: #111111;
+	cursor: pointer;
+	transition: width 250ms;
+	overflow: hidden;
+	text-overflow: clip;
+	text-wrap: nowrap;
+
+	&:hover {
+		width: 150px;
+	}
+}
+
+.plus {
+	font-size: 20px;
+}
+
+.newTab {
+	margin-left: 20px;
+	font-size: 16px;
+}
+
+.main {
+	padding-block: 15px;
+}
+
+.mainTitle {
+	font-size: 30;
+	color: orange;
+}
+
+.titleWrapper {
+	display: flex;
+	column-gap: 20px;
+	// justify-content: space-between;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.button {
+	padding: 8px 15px;
+	border: none;
+	border-radius: 5px;
+	background-color: #1677ff;
+	color: #ffffff;
+	transition: background-color 250ms;
+
+	&:hover {
+		background-color: #4096ff;
+	}
+}
+
+.mainContainer {
+	display: flex;
+	column-gap: 20px;
+}
+
+.sectionTitle {
+	margin-bottom: 10px;
+}
+
+.todoList {
+	min-height: 100vh;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #ced4da;
+}
+
+.todoItem {
+	border: 1px solid #bbbbbb;
+	border-radius: 5px;
+	background-color: #ffffff;
+
+	&:not(:last-child) {
+		margin-bottom: 5px;
+	}
+}
+
+.todoContainer {
+	display: flex;
+}
+
+.todoText {
+	padding: 10px;
+}
+
+.todoTitle {
+	margin-bottom: 5px;
+	color: #1677ff;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.todoNotes {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.todoWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-width: 100px;
+	padding: 10px;
+	border-radius: 0 5px 5px 0;
+	background-color: #5a5a5a;
+	color: #ced4da;
+	font-size: 12px;
+}
+
+.dueTo {
+	font-weight: 600;
+	text-align: center;
+}
+
+.todoTools {
+	display: flex;
+	justify-content: space-between;
+
+	p {
+		flex-basis: 50%;
+		text-align: center;
+	}
+}
