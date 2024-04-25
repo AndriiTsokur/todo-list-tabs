@@ -1,0 +1,72 @@
+.header {
+	min-width: 200px;
+	padding: 10px 0 10px 20px;
+	background-color: #111111;
+	color: #ffffff;
+}
+
+.title {
+	font-size: 30px;
+	margin-bottom: 50px;
+}
+
+.navList {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3px;
+	margin-bottom: 15px;
+}
+
+.navTab {
+	display: block;
+	padding: 10px;
+	border-radius: 10px 0 0 10px;
+	border: 1px solid #111111;
+	background-color: #5a5a5a;
+	color: #afafaf;
+	cursor: pointer;
+	transition:
+		background-color 250ms,
+		color 250ms;
+
+	&.active,
+	&.active:hover {
+		border-right: none;
+		background-color: #ffffff;
+		color: #111111;
+	}
+
+	&:hover {
+		background-color: #afafaf;
+		color: #111111;
+	}
+}
+
+.addTab {
+	display: flex;
+	align-items: center;
+	width: 40px;
+	margin-left: auto;
+	padding: 10px;
+	border-radius: 10px 0 0 10px;
+	background-color: #ffffff;
+	color: #111111;
+	cursor: pointer;
+	transition: width 250ms;
+	overflow: hidden;
+	text-overflow: clip;
+	text-wrap: nowrap;
+
+	&:hover {
+		width: 150px;
+	}
+}
+
+.plus {
+	font-size: 20px;
+}
+
+.newTab {
+	margin-left: 20px;
+	font-size: 16px;
+}
