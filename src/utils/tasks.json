@@ -1,19 +1,22 @@
 [
 	{
 		"tabName": "all",
-		"tabTitle": "All",
+		"tabTitle": "All Records",
 		"categories": [
 			{
+				"name": "todo",
+				"title": "To Do",
+				"items": []
+			},
+			{
 				"name": "inProgress",
-				"title": "In Progress"
+				"title": "In Progress",
+				"items": []
 			},
 			{
 				"name": "done",
-				"title": "Done"
-			},
-			{
-				"name": "todo",
-				"title": "To Do"
+				"title": "Done",
+				"items": []
 			}
 		]
 	},

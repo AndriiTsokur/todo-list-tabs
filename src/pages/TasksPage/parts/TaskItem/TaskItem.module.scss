@@ -1,0 +1,46 @@
+.taskContainer {
+	display: flex;
+}
+
+.taskTextWrapper {
+	padding: 10px;
+}
+
+.taskTitle {
+	margin-bottom: 5px;
+	color: #1677ff;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.taskNotes {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.taskToolsWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-width: 100px;
+	padding: 10px;
+	border-radius: 0 5px 5px 0;
+	background-color: #5a5a5a;
+	color: #ced4da;
+	font-size: 12px;
+}
+
+.taskDeadline {
+	font-weight: 600;
+	text-align: center;
+}
+
+.taskTools {
+	display: flex;
+	justify-content: space-between;
+
+	p {
+		flex-basis: 50%;
+		text-align: center;
+	}
+}

@@ -3,12 +3,12 @@ import styles from './Main.module.scss';
 export const Main: React.FC = () => {
 	return (
 		<main className={styles.main}>
-			<div className={styles.titleWrapper}>
+			{/* <div className={styles.titleWrapper}>
 				<h2 className={styles.mainTitle}>All Records</h2>
 				<button type="button" className={styles.button}>
 					Add new
 				</button>
-			</div>
+			</div> */}
 
 			<div className={styles.mainContainer}>
 				<section className={styles.section}>

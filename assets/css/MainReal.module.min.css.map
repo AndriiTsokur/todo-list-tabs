@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/components/MainReal/MainReal.module.scss"],"names":[],"mappings":"AAAA,MACC,UAAA,CACA,kBAAA","file":"MainReal.module.min.css","sourcesContent":[".main {\n\twidth: 100%;\n\tpadding-block: 10px;\n}\n"]}

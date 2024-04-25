@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/pages/TasksPage/TasksPage.module.scss","TasksPage.module.css"],"names":[],"mappings":"AAAA;EACC,oBAAA;EAAA,oBAAA;EAAA,aAAA;EACA,wBAAA;KAAA,qBAAA;UAAA,gBAAA;ACCD","file":"TasksPage.module.css","sourcesContent":[".mainContainer {\n\tdisplay: flex;\n\tcolumn-gap: 20px;\n}\n",".mainContainer {\n  display: flex;\n  column-gap: 20px;\n}"]}
