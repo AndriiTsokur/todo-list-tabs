@@ -10,14 +10,37 @@
 	margin-bottom: 50px;
 }
 
-.navList {
+.navItem {
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+
+	&:last-child {
+		margin-bottom: 5px;
+	}
+}
+
+.navLink {
+	display: block;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 600;
+	transition: color 250ms;
+
+	&:hover,
+	&.active {
+		color: #ffa500;
+	}
+}
+
+.tabsList {
 	display: flex;
 	flex-direction: column;
 	row-gap: 3px;
 	margin-bottom: 15px;
 }
 
-.navTab {
+.tabItem {
 	display: block;
 	padding: 10px;
 	border-radius: 10px 0 0 10px;

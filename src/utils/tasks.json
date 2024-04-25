@@ -1,0 +1,141 @@
+[
+	{
+		"tabName": "all",
+		"tabTitle": "All",
+		"categories": [
+			{
+				"name": "inProgress",
+				"title": "In Progress"
+			},
+			{
+				"name": "done",
+				"title": "Done"
+			},
+			{
+				"name": "todo",
+				"title": "To Do"
+			}
+		]
+	},
+	{
+		"tabName": "personal",
+		"tabTitle": "Personal",
+		"categories": [
+			{
+				"name": "todo",
+				"title": "To Do",
+				"items": [
+					{
+						"id": 1,
+						"title": "Perform the PERSONAL test task 1",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": false
+					},
+					{
+						"id": 2,
+						"title": "Perform the PERSONAL test task 2",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": false
+					},
+					{
+						"id": 3,
+						"title": "Perform the PERSONAL test task 3",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": false
+					}
+				]
+			},
+			{
+				"name": "inProgress",
+				"title": "In Progress",
+				"items": [
+					{
+						"id": 4,
+						"title": "Perform the PERSONAL test task 4",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": false
+					},
+					{
+						"id": 5,
+						"title": "Perform the PERSONAL test task 5",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": false
+					}
+				]
+			},
+			{
+				"name": "done",
+				"title": "Done",
+				"items": [
+					{
+						"id": 6,
+						"title": "Perform the PERSONAL test task 6",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": true
+					}
+				]
+			}
+		]
+	},
+
+	{
+		"tabName": "work",
+		"tabTitle": "Work",
+		"categories": [
+			{
+				"name": "todo",
+				"title": "To Do",
+				"items": [
+					{
+						"id": 1,
+						"title": "Perform the WORK test task 1",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": false
+					},
+					{
+						"id": 2,
+						"title": "Perform the WORK test task 2",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": false
+					},
+					{
+						"id": 3,
+						"title": "Perform the WORK test task 3",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": false
+					}
+				]
+			},
+			{
+				"name": "inProgress",
+				"title": "In Progress",
+				"items": [
+					{
+						"id": 4,
+						"title": "Perform the WORK test task 4",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": false
+					},
+					{
+						"id": 5,
+						"title": "Perform the WORK test task 5",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": false
+					}
+				]
+			},
+			{
+				"name": "done",
+				"title": "Done",
+				"items": [
+					{
+						"id": 6,
+						"title": "Perform the WORK test task 6",
+						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+						"isDone": true
+					}
+				]
+			}
+		]
+	}
+]

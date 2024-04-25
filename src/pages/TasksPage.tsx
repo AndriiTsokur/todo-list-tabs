@@ -1,5 +1,5 @@
 import { Main } from '@/components';
 
-export const Personal: React.FC = () => {
+export const TasksPage: React.FC = () => {
 	return <Main />;
 };

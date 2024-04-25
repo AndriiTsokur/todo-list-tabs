@@ -1,38 +1,59 @@
 import { Suspense } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet, useParams } from 'react-router-dom';
+
 import styles from './SideBar.module.scss';
+import { navConfig } from '@/utils';
+import tasks from '@/utils/tasks.json';
 
 export const SideBar: React.FC = () => {
-	const defineLinkStyle = (isActive: Boolean) =>
-		isActive ? `${styles.navTab} ${styles.active}` : styles.navTab;
+	const { tabName } = useParams();
+
+	const defineLinkStyle = (isActive: boolean, className: string) =>
+		isActive ? `${styles[className]} ${styles.active}` : styles[className];
 
 	return (
 		<>
 			<header className={styles.header}>
-				<h1 className={styles.title}>ToDo List</h1>
-				<nav className={styles.nav}>
-					<ul className={styles.navList}>
-						<li>
-							<NavLink to="/all" className={({ isActive }) => defineLinkStyle(isActive)}>
-								<p>All</p>
-							</NavLink>
-						</li>
-						<li>
-							<NavLink to="/personal" className={({ isActive }) => defineLinkStyle(isActive)}>
-								<p>Personal</p>
-							</NavLink>
-						</li>
-						<li>
-							<NavLink to="/work" className={({ isActive }) => defineLinkStyle(isActive)}>
-								<p>Work</p>
-							</NavLink>
-						</li>
+				<Link to="/">
+					<h1 className={styles.title}>ToDo List</h1>
+				</Link>
+				<nav>
+					{/* Main navigation block */}
+					<ul>
+						{navConfig.map(({ link, title }) => (
+							<li key={title} className={styles.navItem}>
+								<NavLink
+									to={link}
+									className={({ isActive }) => defineLinkStyle(isActive, 'navLink')}
+								>
+									{title}
+								</NavLink>
+							</li>
+						))}
 					</ul>
+
+					{/* Tab navigation block */}
+					{tabName && (
+						<>
+							<ul className={styles.tabsList}>
+								{tasks.map(({ tabName, tabTitle }) => (
+									<li key={tabName}>
+										<NavLink
+											to={`/tasks/${tabName}`}
+											className={({ isActive }) => defineLinkStyle(isActive, 'tabItem')}
+										>
+											<p>{tabTitle}</p>
+										</NavLink>
+									</li>
+								))}
+							</ul>
+							<div className={styles.addTab}>
+								<p className={styles.plus}>+</p>
+								<p className={styles.newTab}>Add new tab</p>
+							</div>
+						</>
+					)}
 				</nav>
-				<div className={styles.addTab}>
-					<p className={styles.plus}>+</p>
-					<p className={styles.newTab}>Add new tab</p>
-				</div>
 			</header>
 
 			<Suspense fallback={<strong>LOADING...</strong>}>
