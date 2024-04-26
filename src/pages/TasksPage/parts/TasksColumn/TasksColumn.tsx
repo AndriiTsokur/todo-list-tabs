@@ -1,14 +1,10 @@
 import styles from './TasksColumn.module.scss';
+import { TaskContentT } from '@/utils';
 import { TaskItem } from '../TaskItem';
 
 interface PropsT {
 	categoryTitle: string;
-	tasks: {
-		id: number;
-		title: string;
-		notes: string;
-		isDone: boolean;
-	}[];
+	tasks: TaskContentT[];
 }
 
 export const TasksColumn: React.FC<PropsT> = ({ categoryTitle, tasks }) => {

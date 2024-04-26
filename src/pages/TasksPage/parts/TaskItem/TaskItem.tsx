@@ -1,12 +1,8 @@
 import styles from './TaskItem.module.scss';
+import { TaskContentT } from '@/utils';
 
 interface PropsT {
-	data: {
-		id: number;
-		title: string;
-		notes: string;
-		isDone: boolean;
-	};
+	data: TaskContentT;
 }
 
 export const TaskItem: React.FC<PropsT> = ({ data }) => {

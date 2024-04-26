@@ -1,12 +1,16 @@
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import styles from './TasksPage.module.scss';
-import tasks from '@/utils/tasks.json';
+import { selectTasks } from '@/redux/tasksSlice';
+// import tasks from '@/utils/tasks.json';
 import { Button, MainReal, PageTitle } from '@/components';
 import { TasksColumn } from './parts';
 
 export const TasksPage: React.FC = () => {
 	const { tabName: subPage } = useParams();
-	const tabData = tasks.tasksState.find(({ tabName }) => tabName === subPage);
+	const tasks = useSelector(selectTasks);
+
+	const tabData = tasks.find(({ tabName }) => tabName === subPage);
 
 	return (
 		<MainReal>
