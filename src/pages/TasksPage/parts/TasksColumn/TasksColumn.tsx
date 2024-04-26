@@ -26,7 +26,7 @@ export const TasksColumn: React.FC<PropsT> = ({ data: { type, title, content } }
 	return (
 		<Droppable droppableId={type}>
 			{(provided, snapshot) => (
-				<section className={styles.section}>
+				<section>
 					<h3 className={styles.sectionTitle}>{title}</h3>
 					<ul
 						{...provided.droppableProps}

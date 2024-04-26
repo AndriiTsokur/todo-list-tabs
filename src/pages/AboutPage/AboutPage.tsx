@@ -1,9 +1,9 @@
 import styles from './AboutPage.module.scss';
-import { MainReal, PageTitle } from '@/components';
+import { Main, PageTitle } from '@/components';
 
 export const AboutPage: React.FC = () => {
 	return (
-		<MainReal>
+		<Main>
 			<article>
 				<PageTitle title="About" />
 
@@ -33,6 +33,6 @@ export const AboutPage: React.FC = () => {
 					inventore perspiciatis? Ea quae itaque maxime vel?
 				</p>
 			</article>
-		</MainReal>
+		</Main>
 	);
 };

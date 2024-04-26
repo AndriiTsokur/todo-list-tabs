@@ -5,7 +5,7 @@ import { TasksColumnT } from '@/utils';
 import { moveTask } from '@/redux/tasksSlice';
 
 export const handleDrag =
-	(columns: TasksColumnT[], dispatch: Dispatch) =>
+	(tabName: string, columns: TasksColumnT[], dispatch: Dispatch) =>
 	({ source, destination }: DropResult) => {
 		// Make sure we have a valid destination
 		if (destination === undefined || destination === null) return null;
@@ -35,8 +35,13 @@ export const handleDrag =
 				content: newList,
 			};
 
-			// Update the state
-			dispatch(moveTask(columns.map((item) => (item.type === newCol.type ? newCol : item))));
+			// Update the state in the correct Tab
+			dispatch(
+				moveTask({
+					tabName: tabName,
+					categories: columns.map((item) => (item.type === newCol.type ? newCol : item)),
+				}),
+			);
 
 			return null;
 		} else {
@@ -65,10 +70,11 @@ export const handleDrag =
 				content: newEndList,
 			};
 
-			// Update the state
+			// Update the state in the correct Tab
 			dispatch(
-				moveTask(
-					columns.map((item) => {
+				moveTask({
+					tabName: tabName,
+					categories: columns.map((item) => {
 						if (item.type === newStartCol.type) {
 							return newStartCol;
 						} else if (item.type === newEndCol.type) {
@@ -77,7 +83,7 @@ export const handleDrag =
 							return item;
 						}
 					}),
-				),
+				}),
 			);
 
 			return null;
