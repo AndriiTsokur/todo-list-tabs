@@ -1,144 +1,127 @@
-[
-	{
-		"tabName": "all",
-		"tabTitle": "All Records",
-		"categories": [
-			{
-				"name": "todo",
-				"title": "To Do",
-				"items": []
-			},
-			{
-				"name": "inProgress",
-				"title": "In Progress",
-				"items": []
-			},
-			{
-				"name": "done",
-				"title": "Done",
-				"items": []
-			}
-		]
-	},
-	{
-		"tabName": "personal",
-		"tabTitle": "Personal",
-		"categories": [
-			{
-				"name": "todo",
-				"title": "To Do",
-				"items": [
-					{
-						"id": 1,
-						"title": "Perform the PERSONAL test task 1",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": false
-					},
-					{
-						"id": 2,
-						"title": "Perform the PERSONAL test task 2",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": false
-					},
-					{
-						"id": 3,
-						"title": "Perform the PERSONAL test task 3",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": false
-					}
-				]
-			},
-			{
-				"name": "inProgress",
-				"title": "In Progress",
-				"items": [
-					{
-						"id": 4,
-						"title": "Perform the PERSONAL test task 4",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": false
-					},
-					{
-						"id": 5,
-						"title": "Perform the PERSONAL test task 5",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": false
-					}
-				]
-			},
-			{
-				"name": "done",
-				"title": "Done",
-				"items": [
-					{
-						"id": 6,
-						"title": "Perform the PERSONAL test task 6",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": true
-					}
-				]
-			}
-		]
-	},
+{
+	"tasksState": [
+		{
+			"tabName": "personal",
+			"tabTitle": "Personal",
+			"isDeletable": false,
+			"categories": [
+				{
+					"name": "todo",
+					"title": "To Do",
+					"content": [
+						{
+							"id": 1,
+							"title": "Perform the PERSONAL test task 1",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": false
+						},
+						{
+							"id": 2,
+							"title": "Perform the PERSONAL test task 2",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": false
+						},
+						{
+							"id": 3,
+							"title": "Perform the PERSONAL test task 3",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": false
+						}
+					]
+				},
+				{
+					"name": "inProgress",
+					"title": "In Progress",
+					"content": [
+						{
+							"id": 4,
+							"title": "Perform the PERSONAL test task 4",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": false
+						},
+						{
+							"id": 5,
+							"title": "Perform the PERSONAL test task 5",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": false
+						}
+					]
+				},
+				{
+					"name": "done",
+					"title": "Done",
+					"content": [
+						{
+							"id": 6,
+							"title": "Perform the PERSONAL test task 6",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": true
+						}
+					]
+				}
+			]
+		},
 
-	{
-		"tabName": "work",
-		"tabTitle": "Work",
-		"categories": [
-			{
-				"name": "todo",
-				"title": "To Do",
-				"items": [
-					{
-						"id": 1,
-						"title": "Perform the WORK test task 1",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": false
-					},
-					{
-						"id": 2,
-						"title": "Perform the WORK test task 2",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": false
-					},
-					{
-						"id": 3,
-						"title": "Perform the WORK test task 3",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": false
-					}
-				]
-			},
-			{
-				"name": "inProgress",
-				"title": "In Progress",
-				"items": [
-					{
-						"id": 4,
-						"title": "Perform the WORK test task 4",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": false
-					},
-					{
-						"id": 5,
-						"title": "Perform the WORK test task 5",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": false
-					}
-				]
-			},
-			{
-				"name": "done",
-				"title": "Done",
-				"items": [
-					{
-						"id": 6,
-						"title": "Perform the WORK test task 6",
-						"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
-						"isDone": true
-					}
-				]
-			}
-		]
-	}
-]
+		{
+			"tabName": "work",
+			"tabTitle": "Work",
+			"isDeletable": false,
+			"categories": [
+				{
+					"name": "todo",
+					"title": "To Do",
+					"content": [
+						{
+							"id": 7,
+							"title": "Perform the WORK test task 7",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": false
+						},
+						{
+							"id": 8,
+							"title": "Perform the WORK test task 8",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": false
+						},
+						{
+							"id": 9,
+							"title": "Perform the WORK test task 9",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": false
+						}
+					]
+				},
+				{
+					"name": "inProgress",
+					"title": "In Progress",
+					"content": [
+						{
+							"id": 10,
+							"title": "Perform the WORK test task 10",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": false
+						},
+						{
+							"id": 11,
+							"title": "Perform the WORK test task 11",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": false
+						}
+					]
+				},
+				{
+					"name": "done",
+					"title": "Done",
+					"content": [
+						{
+							"id": 12,
+							"title": "Perform the WORK test task 12",
+							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem.",
+							"isDone": true
+						}
+					]
+				}
+			]
+		}
+	]
+}

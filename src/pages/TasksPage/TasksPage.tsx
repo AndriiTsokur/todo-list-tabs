@@ -6,7 +6,7 @@ import { TasksColumn } from './parts';
 
 export const TasksPage: React.FC = () => {
 	const { tabName: subPage } = useParams();
-	const tabData = tasks.find(({ tabName }) => tabName === subPage);
+	const tabData = tasks.tasksState.find(({ tabName }) => tabName === subPage);
 
 	return (
 		<MainReal>
@@ -16,8 +16,8 @@ export const TasksPage: React.FC = () => {
 				</PageTitle>
 
 				<div className={styles.mainContainer}>
-					{tabData?.categories.map(({ name, title, items }) => (
-						<TasksColumn key={name} categoryTitle={title} tasks={items} />
+					{tabData?.categories.map(({ name, title, content }) => (
+						<TasksColumn key={name} categoryTitle={title} tasks={content} />
 					))}
 				</div>
 			</article>

@@ -36,7 +36,7 @@ export const SideBar: React.FC = () => {
 					{tabName && (
 						<>
 							<ul className={styles.tabsList}>
-								{tasks.map(({ tabName, tabTitle }) => (
+								{tasks.tasksState.map(({ tabName, tabTitle }) => (
 									<li key={tabName}>
 										<NavLink
 											to={`/tasks/${tabName}`}

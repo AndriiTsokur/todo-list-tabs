@@ -1,3 +1,8 @@
+.section {
+  -ms-flex-preferred-size: calc((100% - 40px) / 3);
+      flex-basis: calc((100% - 40px) / 3);
+}
+
 .sectionTitle {
   margin-bottom: 10px;
 }
