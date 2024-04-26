@@ -2,7 +2,6 @@ import styles from './AboutPage.module.scss';
 import { Main, PageTitle } from '@/components';
 
 export const AboutPage: React.FC = () => {
-	console.log(localStorage);
 	return (
 		<Main>
 			<article>

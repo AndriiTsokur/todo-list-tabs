@@ -3,7 +3,7 @@ import { DataT } from '@/utils';
 import tasks from '@/utils/tasks.json';
 
 const initialState: DataT = {
-	tasksState: !localStorage.length ? tasks.tasksState : [],
+	tasksState: !localStorage.getItem('persist:tasks') ? tasks.tasksState : [],
 };
 
 const tasksSlice = createSlice({
