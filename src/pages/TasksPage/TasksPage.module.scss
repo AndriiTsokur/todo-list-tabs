@@ -2,3 +2,7 @@
 	display: flex;
 	column-gap: 20px;
 }
+
+.column {
+	flex-basis: calc((100% - 40px) / 3);
+}

@@ -1,16 +1,20 @@
 import { useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { DragDropContext } from 'react-beautiful-dnd';
+
 import styles from './TasksPage.module.scss';
 import { selectTasks } from '@/redux/tasksSlice';
-// import tasks from '@/utils/tasks.json';
 import { Button, MainReal, PageTitle } from '@/components';
 import { TasksColumn } from './parts';
+import { handleDrag } from './utils';
 
 export const TasksPage: React.FC = () => {
-	const { tabName: subPage } = useParams();
+	const dispatch = useDispatch();
 	const tasks = useSelector(selectTasks);
+	const { tabName: subPage } = useParams();
 
 	const tabData = tasks.find(({ tabName }) => tabName === subPage);
+	const columns = tabData?.categories;
 
 	return (
 		<MainReal>
@@ -19,11 +23,15 @@ export const TasksPage: React.FC = () => {
 					<Button text="Add new" />
 				</PageTitle>
 
-				<div className={styles.mainContainer}>
-					{tabData?.categories.map(({ name, title, content }) => (
-						<TasksColumn key={name} categoryTitle={title} tasks={content} />
-					))}
-				</div>
+				<ul className={styles.mainContainer}>
+					<DragDropContext onDragEnd={handleDrag(columns!, dispatch)}>
+						{Object.values(columns!).map((column) => (
+							<li key={column.type} className={styles.column}>
+								<TasksColumn data={column} />
+							</li>
+						))}
+					</DragDropContext>
+				</ul>
 			</article>
 		</MainReal>
 	);

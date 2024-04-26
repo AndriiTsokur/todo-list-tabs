@@ -1,6 +1,6 @@
-.section {
-	flex-basis: calc((100% - 40px) / 3);
-}
+// .section {
+// 	flex-basis: calc((100% - 40px) / 3);
+// }
 
 .sectionTitle {
 	margin-bottom: 10px;
@@ -13,12 +13,6 @@
 	background-color: #ced4da;
 }
 
-.taskItem {
-	border: 1px solid #bbbbbb;
-	border-radius: 5px;
-	background-color: #ffffff;
-
-	&:not(:last-child) {
-		margin-bottom: 5px;
-	}
+.taskItem:not(:last-child) {
+	margin-bottom: 5px;
 }

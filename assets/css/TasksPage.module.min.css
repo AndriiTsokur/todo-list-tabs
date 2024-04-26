@@ -1,1 +1,1 @@
-.mainContainer{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px}/*# sourceMappingURL=TasksPage.module.min.css.map */
+.mainContainer{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px}.column{-ms-flex-preferred-size:calc((100% - 40px)/3);flex-basis:calc((100% - 40px)/3)}/*# sourceMappingURL=TasksPage.module.min.css.map */

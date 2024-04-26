@@ -9,7 +9,7 @@ export type TabT = {
 };
 
 export type TasksColumnT = {
-	name: string;
+	type: string;
 	title: string;
 	content: TaskContentT[];
 };

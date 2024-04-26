@@ -4,6 +4,7 @@ import tasks from '@/utils/tasks.json';
 
 const initialState: DataT = {
 	tasksState: !localStorage.length ? tasks.tasksState : [],
+	// tasksState: [],
 };
 
 const tasksSlice = createSlice({
@@ -12,6 +13,7 @@ const tasksSlice = createSlice({
 	reducers: {
 		moveTask(state, action) {
 			state.tasksState[0].categories = action.payload;
+			console.log(action.payload);
 		},
 	},
 });

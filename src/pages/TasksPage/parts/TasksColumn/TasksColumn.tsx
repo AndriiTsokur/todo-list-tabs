@@ -1,23 +1,48 @@
+import { useEffect, useState } from 'react';
+import { Droppable } from 'react-beautiful-dnd';
+
 import styles from './TasksColumn.module.scss';
-import { TaskContentT } from '@/utils';
+import { TasksColumnT } from '@/utils';
 import { TaskItem } from '../TaskItem';
 
 interface PropsT {
-	categoryTitle: string;
-	tasks: TaskContentT[];
+	data: TasksColumnT;
 }
 
-export const TasksColumn: React.FC<PropsT> = ({ categoryTitle, tasks }) => {
+export const TasksColumn: React.FC<PropsT> = ({ data: { type, title, content } }) => {
+	const [enabled, setEnabled] = useState(false);
+
+	useEffect(() => {
+		const animation = requestAnimationFrame(() => setEnabled(true));
+
+		return () => {
+			cancelAnimationFrame(animation);
+			setEnabled(false);
+		};
+	}, []);
+
+	if (!enabled) return null;
+
 	return (
-		<section className={styles.section}>
-			<h3 className={styles.sectionTitle}>{categoryTitle}</h3>
-			<ul className={styles.taskList}>
-				{tasks.map((taskData) => (
-					<li key={taskData.id} className={styles.taskItem}>
-						<TaskItem data={taskData} />
-					</li>
-				))}
-			</ul>
-		</section>
+		<Droppable droppableId={type}>
+			{(provided, snapshot) => (
+				<section className={styles.section}>
+					<h3 className={styles.sectionTitle}>{title}</h3>
+					<ul
+						{...provided.droppableProps}
+						ref={provided.innerRef}
+						className={styles.taskList}
+						style={{ background: snapshot.isDraggingOver ? '#b6d7f9' : '#ced4da' }}
+					>
+						{content.map((item, idx) => (
+							<li key={item.id} className={styles.taskItem}>
+								<TaskItem content={item} index={idx} />
+							</li>
+						))}
+						{provided.placeholder}
+					</ul>
+				</section>
+			)}
+		</Droppable>
 	);
 };

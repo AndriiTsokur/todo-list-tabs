@@ -5,7 +5,7 @@
 			"tabTitle": "Personal",
 			"categories": [
 				{
-					"name": "todo",
+					"type": "todo",
 					"title": "To Do",
 					"content": [
 						{
@@ -26,7 +26,7 @@
 					]
 				},
 				{
-					"name": "inProgress",
+					"type": "inProgress",
 					"title": "In Progress",
 					"content": [
 						{
@@ -42,7 +42,7 @@
 					]
 				},
 				{
-					"name": "done",
+					"type": "done",
 					"title": "Done",
 					"content": [
 						{
@@ -60,7 +60,7 @@
 			"tabTitle": "Work",
 			"categories": [
 				{
-					"name": "todo",
+					"type": "todo",
 					"title": "To Do",
 					"content": [
 						{
@@ -81,7 +81,7 @@
 					]
 				},
 				{
-					"name": "inProgress",
+					"type": "inProgress",
 					"title": "In Progress",
 					"content": [
 						{
@@ -97,7 +97,7 @@
 					]
 				},
 				{
-					"name": "done",
+					"type": "done",
 					"title": "Done",
 					"content": [
 						{
