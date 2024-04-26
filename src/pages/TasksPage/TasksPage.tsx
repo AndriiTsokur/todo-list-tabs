@@ -4,6 +4,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 
 import styles from './TasksPage.module.scss';
 import { selectTasks } from '@/redux/tasksSlice';
+import { toggleModal } from '@/redux/modalSlice';
 import { Button, Main, PageTitle } from '@/components';
 import { TasksColumn } from './parts';
 import { handleDrag } from './utils';
@@ -16,11 +17,16 @@ export const TasksPage: React.FC = () => {
 	const tabData = tasks.find(({ tabName }) => tabName === subPage);
 	const columns = tabData?.categories;
 
+	const handleButton = (e: React.MouseEvent) => {
+		e.stopPropagation();
+		dispatch(toggleModal());
+	};
+
 	return (
 		<Main>
 			<article>
 				<PageTitle title={`Tasks :: ${tabData?.tabTitle}`}>
-					<Button text="Add new" />
+					<Button text="Add new" onClick={handleButton} />
 				</PageTitle>
 
 				<ul className={styles.mainContainer}>

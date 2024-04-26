@@ -19,3 +19,8 @@ export type TaskContentT = {
 	title: string;
 	notes: string;
 };
+
+export type InputsT = {
+	title: string;
+	notes: string;
+};

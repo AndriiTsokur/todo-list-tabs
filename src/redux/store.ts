@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import {
 	persistStore,
 	persistReducer,
@@ -10,6 +10,7 @@ import {
 	REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { modalReducer } from './modalSlice';
 import { tasksReducer } from './tasksSlice';
 
 const tasksPersistConfig = {
@@ -18,8 +19,15 @@ const tasksPersistConfig = {
 	whitelist: ['tasksState'],
 };
 
+const persistedReducer = persistReducer(tasksPersistConfig, tasksReducer);
+
+const reducers = combineReducers({
+	tasks: persistedReducer,
+	modal: modalReducer,
+});
+
 export const store = configureStore({
-	reducer: { tasks: persistReducer(tasksPersistConfig, tasksReducer) },
+	reducer: reducers,
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({
 			serializableCheck: {
