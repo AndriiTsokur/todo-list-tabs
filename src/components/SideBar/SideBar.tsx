@@ -49,10 +49,10 @@ export const SideBar: React.FC = () => {
 									</li>
 								))}
 							</ul>
-							<div className={styles.addTab}>
+							{/* <div className={styles.addTab}>
 								<p className={styles.plus}>+</p>
 								<p className={styles.newTab}>Add new tab</p>
-							</div>
+							</div> */}
 						</>
 					)}
 				</nav>

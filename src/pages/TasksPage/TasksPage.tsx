@@ -18,7 +18,7 @@ export const TasksPage: React.FC = () => {
 	const tabData = tasks.find(({ tabName }) => tabName === subPage);
 	const columns = tabData?.categories;
 
-	const handleButton = (e: React.MouseEvent) => {
+	const handleAddNew = (e: React.MouseEvent) => {
 		e.stopPropagation();
 		dispatch(toggleModal());
 	};
@@ -27,7 +27,7 @@ export const TasksPage: React.FC = () => {
 		<Main>
 			<article>
 				<PageTitle title={`Tasks :: ${tabData?.tabTitle}`}>
-					<Button text="Add new" onClick={handleButton} type="button" />
+					<Button text="Add new" onClick={handleAddNew} type="button" />
 				</PageTitle>
 
 				<ul className={styles.mainContainer}>

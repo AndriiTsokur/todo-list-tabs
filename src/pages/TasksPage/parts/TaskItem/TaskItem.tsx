@@ -3,7 +3,8 @@ import { useDispatch } from 'react-redux';
 import { Draggable } from 'react-beautiful-dnd';
 
 import styles from './TaskItem.module.scss';
-import { deleteTask } from '@/redux/tasksSlice';
+import { deleteTask, pushTaskToEdit } from '@/redux/tasksSlice';
+import { toggleModal } from '@/redux/modalSlice';
 import { TaskContentT } from '@/utils';
 
 interface PropsT {
@@ -20,6 +21,12 @@ export const TaskItem: React.FC<PropsT> = ({ type, content, index }) => {
 	const handleDelete = (id: string) => {
 		dispatch(deleteTask({ tabName, type, id }));
 	};
+
+	const handleEdit = (type: string, content: TaskContentT) => {
+		dispatch(pushTaskToEdit({ type, content }));
+		dispatch(toggleModal());
+	};
+
 	return (
 		<Draggable draggableId={id} index={index}>
 			{(provided) => (
@@ -36,7 +43,11 @@ export const TaskItem: React.FC<PropsT> = ({ type, content, index }) => {
 					<div className={styles.taskToolsWrapper}>
 						<p className={styles.taskDeadline}>{dueDate}</p>
 						<div className={styles.taskTools}>
-							<button type="button" className={styles.button}>
+							<button
+								type="button"
+								className={styles.button}
+								onClick={() => handleEdit(type, content)}
+							>
 								Edit
 							</button>
 							<button type="button" className={styles.button} onClick={() => handleDelete(id)}>

@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import styles from './Modal.module.scss';
 import { toggleModal } from '@/redux/modalSlice';
+import { pushTaskToEdit } from '@/redux/tasksSlice';
 
 interface PropsT {
 	children: ReactNode;
@@ -11,29 +12,28 @@ export const Modal: React.FC<PropsT> = ({ children }) => {
 	const dispatch = useDispatch();
 	const modalRef = useRef<HTMLDivElement>(null);
 
+	const handleClose = () => {
+		dispatch(pushTaskToEdit(null));
+		dispatch(toggleModal());
+	};
+
 	useEffect(() => {
 		const handleEsc = (e: KeyboardEvent) => {
-			if (e.code === 'Escape') dispatch(toggleModal());
-		};
-
-		const handleClickOutside = (e: MouseEvent) => {
-			if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
-				dispatch(toggleModal());
+			if (e.code === 'Escape') {
+				handleClose();
 			}
 		};
 
 		window.addEventListener('keydown', handleEsc);
-		window.addEventListener('click', handleClickOutside);
 		return () => {
 			window.removeEventListener('keydown', handleEsc);
-			window.removeEventListener('click', handleClickOutside);
 		};
 	}, []);
 
 	return (
 		<div className={styles.backDrop}>
 			<div ref={modalRef} className={styles.modalContainer}>
-				<button type="button" onClick={() => dispatch(toggleModal())} className={styles.closeBtn} />
+				<button type="button" onClick={handleClose} className={styles.closeBtn} />
 
 				{children}
 			</div>

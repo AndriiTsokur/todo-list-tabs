@@ -1,4 +1,10 @@
+export type EditTaskDataT = {
+	type: string;
+	content: Record<string, string>;
+};
+
 export type DataT = {
+	editTaskState: null | EditTaskDataT;
 	tasksState: TabT[];
 };
 
