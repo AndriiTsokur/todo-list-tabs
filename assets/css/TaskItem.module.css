@@ -64,12 +64,8 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.taskTools p {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  text-align: center;
-}
-.taskTools .button {
+
+.button {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   border: 1px solid #ced4da;
@@ -80,12 +76,12 @@
   -webkit-transition: border-color 250ms, background-color 250ms, color 250ms;
   transition: border-color 250ms, background-color 250ms, color 250ms;
 }
-.taskTools .button:hover:first-child, .taskTools .button:focus:first-child {
+.button:hover:first-child, .button:focus:first-child {
   border-color: #008000;
   background-color: #008000;
   color: #ffffff;
 }
-.taskTools .button:hover:last-child, .taskTools .button:focus:last-child {
+.button:hover:last-child, .button:focus:last-child {
   border-color: #ff0000;
   background-color: #ff0000;
   color: #ffffff;
