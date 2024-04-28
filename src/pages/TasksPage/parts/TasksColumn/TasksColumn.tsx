@@ -36,7 +36,7 @@ export const TasksColumn: React.FC<PropsT> = ({ data: { type, title, content } }
 					>
 						{content.map((item, idx) => (
 							<li key={item.id} className={styles.taskItem}>
-								<TaskItem content={item} index={idx} />
+								<TaskItem type={type} content={item} index={idx} />
 							</li>
 						))}
 						{provided.placeholder}

@@ -44,10 +44,38 @@
 
 .taskTools {
 	display: flex;
+	column-gap: 5px;
 	justify-content: space-between;
 
 	p {
 		flex-basis: 50%;
 		text-align: center;
+	}
+
+	.button {
+		flex-basis: 50%;
+		border: 1px solid #ced4da;
+		border-radius: 20px;
+		background-color: transparent;
+		color: currentColor;
+		font-size: 12px;
+		transition:
+			border-color 250ms,
+			background-color 250ms,
+			color 250ms;
+
+		&:hover,
+		&:focus {
+			&:first-child {
+				border-color: #008000;
+				background-color: #008000;
+				color: #ffffff;
+			}
+			&:last-child {
+				border-color: #ff0000;
+				background-color: #ff0000;
+				color: #ffffff;
+			}
+		}
 	}
 }

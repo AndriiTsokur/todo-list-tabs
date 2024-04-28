@@ -19,6 +19,7 @@ a {
 }
 
 button {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   cursor: pointer;
 }
 
