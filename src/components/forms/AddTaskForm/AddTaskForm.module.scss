@@ -1,0 +1,52 @@
+.formLabel {
+	display: block;
+	margin-bottom: 5px;
+	color: #1677ff;
+	font-weight: 500;
+}
+
+.input,
+.textArea {
+	position: relative;
+	width: 100%;
+	padding: 5px 10px;
+	border: 1px solid #afafaf;
+	border-radius: 5px;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.7px;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.input {
+	display: block;
+	height: 30px;
+	margin-bottom: 7px;
+}
+
+.textArea {
+	height: 70px;
+	margin-bottom: 4px;
+	resize: none;
+}
+
+.date {
+	padding: 5px 10px;
+	border: 1px solid #afafaf;
+	border-radius: 5px;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

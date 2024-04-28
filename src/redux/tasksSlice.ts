@@ -10,6 +10,13 @@ const tasksSlice = createSlice({
 	name: 'tasks',
 	initialState,
 	reducers: {
+		addTask(state, action) {
+			const { tabName, formData } = action.payload;
+			state.tasksState
+				.find((tab) => tab.tabName === tabName)
+				?.categories.find((category) => category.type === 'todo')
+				?.content.unshift(formData);
+		},
 		moveTask(state, action) {
 			const { tabName, categories } = action.payload;
 			const exactTab = state.tasksState.find((tab) => tab.tabName === tabName);
@@ -19,5 +26,5 @@ const tasksSlice = createSlice({
 });
 
 export const selectTasks = (state: { tasks: DataT }) => state.tasks.tasksState;
-export const { moveTask } = tasksSlice.actions;
+export const { addTask, moveTask } = tasksSlice.actions;
 export const tasksReducer = tasksSlice.reducer;

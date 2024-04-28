@@ -4,13 +4,14 @@ import { DragDropContext } from 'react-beautiful-dnd';
 
 import styles from './TasksPage.module.scss';
 import { selectTasks } from '@/redux/tasksSlice';
-import { toggleModal } from '@/redux/modalSlice';
-import { Button, Main, PageTitle } from '@/components';
+import { selectModal, toggleModal } from '@/redux/modalSlice';
+import { AddTaskForm, Button, Main, Modal, PageTitle } from '@/components';
 import { TasksColumn } from './parts';
 import { handleDrag } from './utils';
 
 export const TasksPage: React.FC = () => {
 	const dispatch = useDispatch();
+	const isModalVisible = useSelector(selectModal);
 	const tasks = useSelector(selectTasks);
 	const { tabName: subPage } = useParams();
 
@@ -26,7 +27,7 @@ export const TasksPage: React.FC = () => {
 		<Main>
 			<article>
 				<PageTitle title={`Tasks :: ${tabData?.tabTitle}`}>
-					<Button text="Add new" onClick={handleButton} />
+					<Button text="Add new" onClick={handleButton} type="button" />
 				</PageTitle>
 
 				<ul className={styles.mainContainer}>
@@ -39,6 +40,12 @@ export const TasksPage: React.FC = () => {
 					</DragDropContext>
 				</ul>
 			</article>
+
+			{isModalVisible && (
+				<Modal>
+					<AddTaskForm />
+				</Modal>
+			)}
 		</Main>
 	);
 };

@@ -10,16 +10,19 @@
 					"content": [
 						{
 							"id": "1",
+							"dueDate": "2024-04-29",
 							"title": "Perform the PERSONAL test task 1",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						},
 						{
 							"id": "2",
+							"dueDate": "",
 							"title": "Perform the PERSONAL test task 2",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						},
 						{
 							"id": "3",
+							"dueDate": "",
 							"title": "Perform the PERSONAL test task 3",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						}
@@ -31,11 +34,13 @@
 					"content": [
 						{
 							"id": "4",
+							"dueDate": "",
 							"title": "Perform the PERSONAL test task 4",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						},
 						{
 							"id": "5",
+							"dueDate": "",
 							"title": "Perform the PERSONAL test task 5",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						}
@@ -47,6 +52,7 @@
 					"content": [
 						{
 							"id": "6",
+							"dueDate": "",
 							"title": "Perform the PERSONAL test task 6",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						}
@@ -65,16 +71,19 @@
 					"content": [
 						{
 							"id": "7",
+							"dueDate": "",
 							"title": "Perform the WORK test task 7",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						},
 						{
 							"id": "8",
+							"dueDate": "",
 							"title": "Perform the WORK test task 8",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						},
 						{
 							"id": "9",
+							"dueDate": "",
 							"title": "Perform the WORK test task 9",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						}
@@ -86,11 +95,13 @@
 					"content": [
 						{
 							"id": "10",
+							"dueDate": "",
 							"title": "Perform the WORK test task 10",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						},
 						{
 							"id": "11",
+							"dueDate": "",
 							"title": "Perform the WORK test task 11",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						}
@@ -102,6 +113,7 @@
 					"content": [
 						{
 							"id": "12",
+							"dueDate": "",
 							"title": "Perform the WORK test task 12",
 							"notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, exercitationem."
 						}

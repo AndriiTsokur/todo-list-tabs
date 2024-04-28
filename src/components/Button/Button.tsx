@@ -2,12 +2,14 @@ import styles from './Button.module.scss';
 
 interface PropsT {
 	text: string;
-	onClick: (e: React.MouseEvent) => void;
+	type: 'button' | 'submit' | 'reset' | undefined;
+	onClick?: (e: React.MouseEvent) => void;
+	style?: React.CSSProperties;
 }
 
-export const Button: React.FC<PropsT> = ({ text, onClick }) => {
+export const Button: React.FC<PropsT> = ({ onClick, style, text, type }) => {
 	return (
-		<button type="button" className={styles.button} onClick={onClick}>
+		<button type={type} className={styles.button} onClick={onClick} style={style || {}}>
 			{text}
 		</button>
 	);

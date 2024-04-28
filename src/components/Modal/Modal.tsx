@@ -1,15 +1,13 @@
-import { useEffect, useRef } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { useForm, SubmitHandler } from 'react-hook-form';
 import styles from './Modal.module.scss';
-import { InputsT } from '@/utils';
 import { toggleModal } from '@/redux/modalSlice';
 
-// interface PropsT {
-// 	children: ReactNode;
-// }
+interface PropsT {
+	children: ReactNode;
+}
 
-export const Modal: React.FC = () => {
+export const Modal: React.FC<PropsT> = ({ children }) => {
 	const dispatch = useDispatch();
 	const modalRef = useRef<HTMLDivElement>(null);
 
@@ -32,28 +30,12 @@ export const Modal: React.FC = () => {
 		};
 	}, []);
 
-	const {
-		register,
-		handleSubmit,
-		// watch,
-		formState: { errors },
-	} = useForm<InputsT>();
-
-	const onSubmit: SubmitHandler<InputsT> = (data) => console.log(data);
-
 	return (
 		<div className={styles.backDrop}>
 			<div ref={modalRef} className={styles.modalContainer}>
-				<form onSubmit={handleSubmit(onSubmit)}>
-					<label>Task:</label>
-					<input {...register('title', { required: true })} />
-					{errors.title && <span>This field is required</span>}
+				<button type="button" onClick={() => dispatch(toggleModal())} className={styles.closeBtn} />
 
-					<label>Notes:</label>
-					<textarea {...register('notes')} />
-
-					<input type="submit" />
-				</form>
+				{children}
 			</div>
 		</div>
 	);

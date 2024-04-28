@@ -16,11 +16,7 @@ export type TasksColumnT = {
 
 export type TaskContentT = {
 	id: string;
-	title: string;
-	notes: string;
-};
-
-export type InputsT = {
+	dueDate: string;
 	title: string;
 	notes: string;
 };

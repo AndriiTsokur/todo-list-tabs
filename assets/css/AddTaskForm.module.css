@@ -1,0 +1,57 @@
+.formLabel {
+  display: block;
+  margin-bottom: 5px;
+  color: #1677ff;
+  font-weight: 500;
+}
+
+.input,
+.textArea {
+  position: relative;
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #afafaf;
+  border-radius: 5px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+}
+.input:focus,
+.textArea:focus {
+  outline: none;
+}
+
+.input {
+  display: block;
+  height: 30px;
+  margin-bottom: 7px;
+}
+
+.textArea {
+  height: 70px;
+  margin-bottom: 4px;
+  resize: none;
+}
+
+.date {
+  padding: 5px 10px;
+  border: 1px solid #afafaf;
+  border-radius: 5px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.date:focus {
+  outline: none;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}/*# sourceMappingURL=AddTaskForm.module.css.map */

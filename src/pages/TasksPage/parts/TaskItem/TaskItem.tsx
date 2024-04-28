@@ -9,7 +9,7 @@ interface PropsT {
 }
 
 export const TaskItem: React.FC<PropsT> = ({ content, index }) => {
-	const { id, title, notes } = content;
+	const { id, dueDate, title, notes } = content;
 	return (
 		<Draggable draggableId={id} index={index}>
 			{(provided) => (
@@ -24,7 +24,7 @@ export const TaskItem: React.FC<PropsT> = ({ content, index }) => {
 						<p className={styles.taskNotes}>{notes}</p>
 					</div>
 					<div className={styles.taskToolsWrapper}>
-						<p className={styles.taskDeadline}>29.04.2024</p>
+						<p className={styles.taskDeadline}>{dueDate}</p>
 						<div className={styles.taskTools}>
 							<p>Edit</p>
 							<p>Del</p>
